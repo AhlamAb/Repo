@@ -1,0 +1,53 @@
+﻿@using CompnayWebsite_Models.Models
+@model List<ComplaintsAndSuggestions>
+
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">List of Complaints And Suggestions</h2>
+        </div>
+
+    </div>
+</div>
+
+@if (Model.Count > 0)
+{
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Complaint ID</th>
+                    <th scope="col">Complaint Title</th>
+                    <th scope="col">Company Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ComplaintID</td>
+                        <td>@item.Title</td>
+                        <td>@item.Company.CompanyName</td>
+                        <td>@item.CategoryOfComplaintsAndSuggestion</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a asp-controller="ComplaintsAndSuggestions" asp-action="GetByID" asp-route-id="@item.ComplaintID" class="btn btn-primary">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p>No Complaints exists.</p>
+}
+
+

@@ -1,0 +1,12 @@
+C:\ForLearning\CompnayWebsite\CompnayWebsite_Models\bin\Debug\net5.0\CompnayWebsite_Models.deps.json
+C:\ForLearning\CompnayWebsite\CompnayWebsite_Models\bin\Debug\net5.0\CompnayWebsite_Models.dll
+C:\ForLearning\CompnayWebsite\CompnayWebsite_Models\bin\Debug\net5.0\CompnayWebsite_Models.pdb
+C:\ForLearning\CompnayWebsite\CompnayWebsite_Models\obj\Debug\net5.0\CompnayWebsite_Models.csproj.AssemblyReference.cache
+C:\ForLearning\CompnayWebsite\CompnayWebsite_Models\obj\Debug\net5.0\CompnayWebsite_Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\ForLearning\CompnayWebsite\CompnayWebsite_Models\obj\Debug\net5.0\CompnayWebsite_Models.AssemblyInfoInputs.cache
+C:\ForLearning\CompnayWebsite\CompnayWebsite_Models\obj\Debug\net5.0\CompnayWebsite_Models.AssemblyInfo.cs
+C:\ForLearning\CompnayWebsite\CompnayWebsite_Models\obj\Debug\net5.0\CompnayWebsite_Models.csproj.CoreCompileInputs.cache
+C:\ForLearning\CompnayWebsite\CompnayWebsite_Models\obj\Debug\net5.0\CompnayWebsite_Models.dll
+C:\ForLearning\CompnayWebsite\CompnayWebsite_Models\obj\Debug\net5.0\refint\CompnayWebsite_Models.dll
+C:\ForLearning\CompnayWebsite\CompnayWebsite_Models\obj\Debug\net5.0\CompnayWebsite_Models.pdb
+C:\ForLearning\CompnayWebsite\CompnayWebsite_Models\obj\Debug\net5.0\ref\CompnayWebsite_Models.dll

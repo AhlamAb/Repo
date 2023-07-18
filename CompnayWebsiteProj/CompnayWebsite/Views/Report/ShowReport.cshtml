@@ -1,0 +1,62 @@
+﻿<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="widget chart">
+            <div class="p-4">
+                <h5 class="fw-bold">Statistical Report by Sectors</h5>
+            </div>
+            <ejs-accumulationchart id="dounghtchart" enableSmartLabels>
+                <!-- Accumulation Chart content -->
+                <e-accumulation-series-collection>
+                    <e-accumulation-series dataSource="@ViewBag.sectorGroups"
+                       xName="Sector" yName="Count" innerRadius="60" legendShape="Circle">
+                    <e-accumulationseries-datalabel name="Count" visible ></e-accumulationseries-datalabel>
+
+                    </e-accumulation-series>
+                </e-accumulation-series-collection>
+                <e-accumulationchart-legendsettings position="Top" toggleVisibility="false">
+                    <e-legendsettings-textstyle color=#5A5A5A size="1rem"></e-legendsettings-textstyle>
+
+                </e-accumulationchart-legendsettings>
+                <e-accumulationchart-tooltipsettings enable ></e-accumulationchart-tooltipsettings>
+            </ejs-accumulationchart>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="widget chart">
+            <div class="p-4">
+                <h5 class="fw-bold">Statistical Report by Size</h5>
+            </div>
+            <ejs-chart id="spline-chart">
+                <!-- Chart content -->
+                <e-chart-primaryxaxis valueType=Category>
+                    <e-majorgridlines width=0></e-majorgridlines> 
+                    <e-majorticklines width=0 ></e-majorticklines>
+                </e-chart-primaryxaxis>
+
+                <e-chart-primaryyaxis>
+                    <e-minorgridlines width=1 color="#B2BEB5" dashArray="3,5"></e-minorgridlines>
+                    <e-majorticklines width=0></e-majorticklines>
+                    <e-linestyle width=0 ></e-linestyle>
+                </e-chart-primaryyaxis>
+
+                <e-chart-chartarea>
+                    <e-chartarea-border width=0></e-chartarea-border>
+                </e-chart-chartarea>
+
+                <e-series-collection>
+                    <e-series dataSource="@ViewBag.sizeGroups" width=3
+                              xName="Size" yName="Count" name="Size" type="@Syncfusion.EJ2.Charts.ChartSeriesType.Spline"></e-series>
+                    <e-series></e-series>
+
+                </e-series-collection>
+
+                 <e-chart-legendsettings position="Top" alignment="Far" toggleVisibility="false">
+                    <e-legendsettings-textstyle color=#5A5A5A size="1rem"></e-legendsettings-textstyle>
+
+                </e-chart-legendsettings>
+              <e-chart-tooltipsettings enable shared ></e-chart-tooltipsettings>
+            </ejs-chart>
+        </div>
+    </div>
+</div>

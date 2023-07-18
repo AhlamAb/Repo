@@ -1,0 +1,95 @@
+﻿@using CompnayWebsite_Models.Models
+@model ComplaintsAndSuggestions
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly "></div>
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-info pl-3">Create New Complaints And Suggestions</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Title"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Title" class="form-control" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Description"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="Description" class="form-control summernote"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="CompanyID"></label>
+                    </div>
+                    <div class="col-8">
+                        <select asp-for="CompanyID" class="form-control">
+                            <option value="">Select Company</option>
+                            @foreach (var company in ViewBag.companies)
+                            {
+                                <option value="@company.CompanyID">@company.CompanyName</option>
+                            }
+                        </select>
+                        <span asp-validation-for="CompanyID" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="CategoryOfComplaintsAndSuggestion"> Category Of Complaints</label>
+                    </div>
+                    <div class="col-8">
+                        <select asp-for="CategoryOfComplaintsAndSuggestion" class="form-control">
+                            <option value="">Select Category</option>
+                            @foreach (var category in Enum.GetValues(typeof(CategoryOfComplaintsAndSuggestion)))
+                            {
+                                <option value="@category">@category</option>
+                            }
+                        </select>
+                        <span asp-validation-for="CategoryOfComplaintsAndSuggestion" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Timestamp"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Timestamp" class="form-control" />
+                        <span asp-validation-for="Timestamp" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-top:5px">Submit</button>
+</form>
+
+@section Scripts{
+
+
+    <partial name="_ValidationScriptsPartial">
+
+        <script>
+            $(document).ready(function () {
+                $('.summernote').summernote({
+                    height:250
+
+                });
+            });
+        </script>
+    }
+

@@ -1,0 +1,66 @@
+﻿@using CompnayWebsite_Models.Models
+@model ComplaintsAndSuggestions
+
+@{
+    ViewData["Title"] = "Complaints and Suggestions Details";
+}
+
+<div class="container mt-5">
+    <h2 class="text-primary mb-4">Complaints and Suggestions Details</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Title:</h5>
+                </div>
+                <div class="col-md-9">
+                    <p>@Model.Title</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Description:</h5>
+                </div>
+                <div class="col-md-9">
+                    <p class="mb-0">@Html.Raw(Model.Description)</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Company:</h5>
+                </div>
+                <div class="col-md-9">
+                    <p>@Model.Company.CompanyName</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Category:</h5>
+                </div>
+                <div class="col-md-9">
+                    <p>@Model.CategoryOfComplaintsAndSuggestion</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Timestamp:</h5>
+                </div>
+                <div class="col-md-9">
+                    <p>@Model.Timestamp</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-6">
+            <a asp-action="Index" class="btn btn-primary">Back to List</a>
+        </div>
+    </div>
+</div>
+
